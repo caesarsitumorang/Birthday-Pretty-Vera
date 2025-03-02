@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Vera!</title>
+    <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+   
+    <!-- Page 1: Welcome -->
+    <div id="page1" class="page active">
+        <h2>Happy Birthday Sayanggkuu 🎉</h2>
+        <p>Ada kejutan spesial untukmu! Klik tombol di bawah ini untuk melihatnya.</p>
+        <button class="btn" onclick="nextPage()">Lihat Kejutan!</button>
+    </div>
+    
+    <!-- Page 2: Input Form -->
+    <div id="page2" class="page">
+        <h2>Sebelum lanjut harus masukin ini dulu</h2>
+        <p> Masukkan nama dan umurmu dong,tapi sekalian putar musik nyaa hehehe</p>
+        <audio id="birthdayAudio" controls>
+            <source src="audio/perfect.mp3" type="audio/mp3">
+            Browser kamu tidak mendukung pemutar audio.
+        </audio>
+        <div class="form-group">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" placeholder="Masukkan nama kamu">
+            <div id="nameError" class="error">Nama tidak sesuai</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="age">Umur:</label>
+            <input type="number" id="age" placeholder="Masukkan umur kamu">
+            <div id="ageError" class="error">Umur tidak sesuai</div>
+        </div>
+         <!-- Pemutar Audio -->
+    <div class="audio-container">
+       
+    </div>
+        <button class="btn" onclick="validateForm()">Lanjut</button>
+        <button class="btn" onclick="prevPage()">Kembali</button>
+    </div>
+    
+    <!-- Page 3: Birthday Wishes -->
+    <div id="page3" class="page">
+        <h1>Selamat ulang tahun yaaaaaaaaaaa
+            <span id="nameDisplay"></span></h1>
+        <p>Halo cantik selamat ulang tahun ya sayangg, hari ini kamu berumur <span id="ageDisplay"></span>. hari ini adalah hari spesial karena kamu bertambah satu tahun lebih dewasa. semoga rezekimu dilancarkan segala urusanmu dimudahkan, dan kamu selalu diberikan kesehatan serta kebahagiaan, aku berharap kamu terus berkembang menjadi pribadi yang lebih baik semakin kuat semakin dewasa dan semakin bersinar.</p>
+        <p>Terima kasih telah menjadi perempuan yang hebat hingga saat ini, terima kasih sudah bertahan sejauh ini dan terus melangkah meskipun banyak tantangan, semoga semua hal yang pernah membuatmu runtuh justru menjadi alasan bagimu untuk tumbuh lebih kuat, dan aku berharap semesta selalu berpihak kepadamu</p>
+        <p>Di usia yang baru ini semoga setiap langkahmu diberikan kemudahan setiap doa dan harapanmu dikabulkan serta setiap perjuanganmu membawa keberhasilan yang luar biasa, aku ingin kamu selalu dikelilingi oleh orang orang yang tulus mencintaimu, mendukungmu, dan membawa kebahagiaan dalam hidupmu</p>
+        <p>Jangan pernah ragu untuk mengejar impian impianmu, karena aku yakin kamu mampu meraihnya dengan segala usaha dan ketulusanmu ,semoga segala hal baik selalu menyertai hidupmu, kesehatan yang tak ternilai, kebahagiaan yang tak terbatas, serta keberuntungan dalam setiap langkahmu</p>
+        <p>Hari ini adalah milikmu, nikmatilah dengan penuh suka cita, semoga usiamu yang baru membawa kebijaksanaan pengalaman baru yang menginspirasi dan kebahagiaan yang lebih besar dari sebelumnya, teruslah tumbuh teruslah melangkah dan tetaplah menjadi pribadi yang menginspirasi</p>
+        <p>Sekali lagi Selamat ulang tahun yaa sayanggg, semoga tahun ini menjadi tahun terbaik dalam hidupmu ❤️💕💖🦋🫀</p>
+        <button class="btn" onclick="nextPage()">lihat perjalananmu</button>
+        <button class="btn" onclick="prevPage()">Kembali</button>
+        
+    </div>
+    <!-- Page 4: Journey Timeline -->
+    <div id="page4" class="page">
+        <h1>Happy Birthday</h1>
+        <h3>Perjalanan Kamu</h3>
+        
+        <div class="stats">
+            <div class="stats-item">
+                <span>Tanggal Lahir:</span>
+                <span>03 Maret 2004</span>
+            </div>
+            <div class="stats-item">
+                <span>Hari yang telah dilalui:</span>
+                <span id="daysPassed">Loading...</span>
+            </div>
+            <div class="stats-item">
+                <span>Bulan yang dilewati:</span>
+                <span id="monthsPassed">Loading...</span>
+            </div>
+            <div class="stats-item">
+                <span>Tahun yang dilewati:</span>
+                <span id="yearsPassed">Loading...</span>
+            </div>
+        </div>
+        
+         <!-- Animasi Hati dan Bunga -->
+         <div class="animation-container">
+            <div class="heart"></div>
+            <div class="flower"></div>
+        </div>
+        <h2>Foto Kamu yang ada di aku nihhh</h2>
+        <div class="photo-gallery">
+            <div class="photo-card">
+                <img src="img/foto1.jpg" alt="placeholder">
+                <div class="card-overlay">Pera 1</div>
+            </div>
+            <div class="photo-card">
+                <img src="img/1.jpg" alt="placeholder">
+                <div class="card-overlay">Pera 2</div>
+            </div>
+            <div class="photo-card">
+                <img src="img/2.jpg" alt="placeholder">
+                <div class="card-overlay">Pera 3</div>
+            </div>
+            <div class="photo-card">
+                <img src="img/3.jpg" alt="placeholder">
+                <div class="card-overlay">Pera 4</div>
+            </div>
+            <div class="photo-card">
+                <img src="img/5.jpg" alt="placeholder">
+                <div class="card-overlay">Pera 5</div>
+            </div>
+            <div class="photo-card">
+                <img src="img/12.jpg" alt="placeholder">
+                <div class="card-overlay">Pera 6</div>
+            </div>
+            <div class="photo-card">
+                <img src="img/6.jpg" alt="placeholder">
+                <div class="card-overlay">Pera 7</div>
+            </div>
+            <div class="photo-card">
+                <img src="img/7.jpg" alt="placeholder">
+                <div class="card-overlay">Pera 8</div>
+            </div>
+            <div class="photo-card">
+                <img src="img/8.jpg" alt="placeholder">
+                <div class="card-overlay">Pera 9</div>
+            </div>
+            <div class="photo-card">
+                <img src="img/9.jpg" alt="placeholder">
+                <div class="card-overlay">Pera 10</div>
+            </div>  
+            <div class="photo-card">
+                <img src="img/10.jpg" alt="placeholder">
+                <div class="card-overlay">Pera 11</div>
+            </div>
+            <div class="photo-card">
+                <img src="img/11.jpg" alt="placeholder">
+                <div class="card-overlay">Pera 12</div>
+            </div>
+            <div class="photo-card">
+                <img src="img/13.jpg" alt="placeholder">
+                <div class="card-overlay">Pera 13</div>
+            </div>
+            <div class="photo-card">
+                <img src="img/14.jpg" alt="placeholder">
+                <div class="card-overlay">Pera 14</div>
+            </div>
+            <div class="photo-card">
+                <img src="img/15.jpg" alt="placeholder">
+                <div class="card-overlay">Pera 15</div>
+            </div>
+
+        </div>
+        <button class="btn" onclick="prevPage()">Kembali</button>
+    </div>
+    
+    <script src="script.js"></script>
+      
+</body>
+</html>
